@@ -1,0 +1,181 @@
+.container {
+  padding: 0 2rem;
+}
+
+.main {
+  min-height: 100vh;
+  padding: 2rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+
+.bookmark-component {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.bookmark-component .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bookmark-component .header .title {
+  flex: 1;
+  text-align: center;
+}
+
+.bookmark-component .content {
+  margin-top: 4rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+}
+
+.card {
+  padding: 1.5rem;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  transition: color 0.15s ease, border-color 0.15s ease;
+  width: 350px;
+}
+
+.bookmark-content .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bookmark-content .list li:not(:first-child) {
+  padding-top: 1rem;
+}
+
+.card .bookmark-list-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card .bookmark-list-card .title {
+  cursor: pointer;
+}
+
+.card .bookmark-list-card:not(:last-child) {
+  margin-bottom: .5rem;
+}
+
+.form-modal {
+  position: fixed;
+  background: rgba(0, 0, 0, 0.523);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+}
+
+.bookmark-form-component {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 500px;
+  background-color: #fff;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.bookmark-form-component input {
+  display: block;
+  margin-bottom: 1rem;
+  width: 250px;
+  height: 40px;
+  padding: 1rem;
+}
+
+.bookmark-form-component select {
+  height: 40px;
+  width: 250px;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.bookmark-form-component span {
+  display: block;
+  margin-bottom: 1rem;
+  color: red;
+  font-size: 0.875rem;
+  margin-top: -0.8rem;
+}
+
+button.btn {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.bookmark-form-component .add-category {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #000;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  line-height: 40px;
+}
+
+.bookmark-form-component .category {
+  display: flex;
+  align-items: center;
+}
+
+.new-category {
+  display: flex;
+  align-items: center;
+}
+
+.new-category button {
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.category .single {
+  margin-bottom: 2rem;
+}
+
+.category-name {
+  margin-bottom: .5rem;
+}
