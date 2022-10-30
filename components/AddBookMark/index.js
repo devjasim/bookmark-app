@@ -51,7 +51,7 @@ const AddBookMarkComponent = ({ setOpenModal }) => {
 				localStorage.setItem("bookmarks", JSON.stringify(allData));
       	closeModal();
 			} catch (error) {
-				
+				console.log("ERR")
 			}
     }
   };

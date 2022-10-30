@@ -36,11 +36,11 @@ const BookMarkComponent = () => {
       </div>
       <div className='content'>
         <div className="category">
-          {categories.map((item) => (
+          {(categories || []).map((item) => (
             <div key={item?.id} className="single">
               <div className="category-name">{item.name}</div>
               <div className='card'>
-                {bookmarks.filter((single) => single.category === item.name).map((bookmark) => (
+                {(bookmarks || []).filter((single) => single.category === item.name).map((bookmark) => (
                   <BookMarkCard
                     key={bookmark.title}
                     setBookMarkDetails={(value) => setBookmarksDetails(value)}
