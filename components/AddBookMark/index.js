@@ -84,6 +84,7 @@ const AddBookMarkComponent = ({ setOpenModal }) => {
   };
 
   const handleAddCategory = () => {
+		if(!newCategory) return;
     const data = {
       id: '_' + Math.random().toString(36).substr(2, 9),
       ...state,
@@ -135,16 +136,22 @@ const AddBookMarkComponent = ({ setOpenModal }) => {
           <span>{!urlValid ? 'URL is not valid' : 'Required'}</span>
         )}
         {addCategory ? (
-          <div className='new-category'>
-            <input
-              onChange={handleChangeCategory}
-              name='newCategory'
-              value={newCategory}
-            />
-            <button type='button' onClick={handleAddCategory}>
-              Add
-            </button>
-          </div>
+					<div>
+						<div className='new-category'>
+							<input
+								onChange={handleChangeCategory}
+								name='newCategory'
+								value={newCategory}
+								placeholder="New Category Name"
+							/>
+							<button type='button' onClick={handleAddCategory}>
+								Add
+							</button>
+						</div>
+						{!newCategory && (
+							<span>Required</span>
+						)}
+					</div>
         ) : (
           <>
             <div className='category'>
